@@ -1,6 +1,8 @@
+import {Service} from 'typedi';
 import fastify, {FastifyLoggerInstance} from 'fastify';
 import {FastifyInstance} from 'fastify/types/instance';
 
+@Service()
 export class HttpServer {
   private _fastify?: FastifyInstance;
 
