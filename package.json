@@ -1,0 +1,19 @@
+{
+  "name": "coffee-dashboard",
+  "version": "1.0.0",
+  "description": "A sample fastify dashboard application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmvbr/coffee-dashboard.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmvbr/coffee-dashboard/issues"
+  },
+  "homepage": "https://github.com/gmvbr/coffee-dashboard#readme"
+}
