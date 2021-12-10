@@ -21,7 +21,7 @@ export class HttpServer {
    * @param port exemplo 3000
    * @param host exemplo: 0.0.0.0
    */
-  public async listen(port: string, host: string) {
+  public async listen(port: number, host: string) {
     await this._fastify?.listen(port, host);
   }
 }
