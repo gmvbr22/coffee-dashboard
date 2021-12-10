@@ -1,5 +1,6 @@
 import {Service} from 'typedi';
-import fastify, {FastifyLoggerInstance} from 'fastify';
+
+import fastify from 'fastify';
 import {FastifyInstance} from 'fastify/types/instance';
 
 @Service()
@@ -8,11 +9,9 @@ export class HttpServer {
 
   /**
    * Inicializa o Http Server
-   *
-   * @param logger Logger compativel com fastify
    */
-  public initialize(logger: FastifyLoggerInstance) {
-    this._fastify = fastify({logger});
+  public constructor() {
+    this._fastify = fastify({logger: {}});
   }
 
   /**
