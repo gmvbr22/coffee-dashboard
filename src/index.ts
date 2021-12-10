@@ -1,24 +1,16 @@
-console.log('Try npm run lint/fix!');
+import 'reflect-metadata';
 
-const longString =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
+import Container from 'typedi';
 
-const trailing = 'Semicolon';
+import {Config} from './infra/config';
+import {HttpServer} from './infra/http_server';
 
-const why = 'am I tabbed?';
+async function main() {
+  const config = Container.get(Config);
+  await config.loadEnv();
 
-export function doSomeStuff(
-  withThis: string,
-  andThat: string,
-  andThose: string[]
-) {
-  //function on one line
-  if (!andThose.length) {
-    return false;
-  }
-  console.log(withThis);
-  console.log(andThat);
-  console.dir(andThose);
-  return;
+  const server = Container.get(HttpServer);
+  await server.listen(config.env!.port!, config.env!.host!);
 }
-// TODO: more examples
+
+main();
