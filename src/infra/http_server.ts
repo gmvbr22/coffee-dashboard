@@ -7,11 +7,11 @@ export class HttpServer {
   private _fastify?: FastifyInstance;
 
   /**
-   * Inicializa o HttpServer
+   * Inicializa o Http Server
    *
    * @param logger Logger compativel com fastify
    */
-  public constructor(logger: FastifyLoggerInstance) {
+  public initialize(logger: FastifyLoggerInstance) {
     this._fastify = fastify({logger});
   }
 
