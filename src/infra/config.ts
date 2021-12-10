@@ -15,7 +15,7 @@ export class Config {
   /**
    * Carrega as variáveis de ambiente
    */
-  public loadEnv() {
+  public async loadEnv() {
     this.env = envSchema({
       dotenv: true,
       schema: S.object()
